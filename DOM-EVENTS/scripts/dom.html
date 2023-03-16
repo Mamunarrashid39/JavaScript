@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore dom</title>
+    <style>
+      article {
+        border: 2px solid tomato;
+        border-radius: 20px;
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h3>Exploring dom</h3>
+        <article>
+          <h3>article-1</h3>
+          <p class="author">author-1</p>
+          <p class="description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            totam id impedit assumenda vitae vel ea officia repellendus
+            blanditiis, molestiae voluptate autem consectetur in. Explicabo ut
+            dolorem ad ea dolor?
+          </p>
+        </article>
+        <article>
+          <h3>article-2</h3>
+          <p class="author">author-2</p>
+          <p class="description">
+            Nobis veritatis ullam dolore necessitatibus. Vero repellat, deleniti
+            culpa nihil iste dolore voluptates quidem numquam dolorum, similique
+            dolor sequi cupiditate. Nostrum dolorum qui at consequuntur, libero
+            aliquam molestiae quibusdam placeat?
+          </p>
+        </article>
+        <article>
+          <h3>article-3</h3>
+          <p class="author">author-3</p>
+          <p class="description">
+            Corrupti vitae quam minima nulla, iste assumenda voluptas fugit,
+            tempora asperiores ipsa, ad quasi incidunt sunt? A soluta
+            praesentium aut incidunt beatae ducimus qui? Commodi impedit ipsa
+            rerum porro nostrum?
+          </p>
+        </article>
+      </section>
+    </main>
+    <script>
+      var authors = document.getElementsByClassName("author");
+      for (var i = 0; i < authors.length; i++) {
+        var element = authors[i];
+        console.log(element.innerHTML);
+        element.innerHTML = 'lekhok-'+(i+1);
+        element.style.backgroundColor = "lightblue";
+        element.style.margin = "10px";
+        console.log(element);
+      }
+    </script>
+  </body>
+</html>
