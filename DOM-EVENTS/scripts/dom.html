@@ -12,13 +12,16 @@
         margin: 5px;
         padding: 5px;
       }
+      .special h3 {
+        
+      }
     </style>
   </head>
   <body>
     <main>
       <section>
         <h3>Exploring dom</h3>
-        <article>
+        <article id="first-article">
           <h3>article-1</h3>
           <p class="author">author-1</p>
           <p class="description">
@@ -48,18 +51,32 @@
             rerum porro nostrum?
           </p>
         </article>
+        <article>
+          <h3>Grocary-List</h3>
+          
+            <ul id="gift-list">
+              <li>gift-item-1</li>
+              <li>gift-item-2</li>
+              <li>gift-item-3</li>
+              <li>gift-item-4</li>
+              <li>gift-item-5</li>
+            </ul>
+          
+        </article>
       </section>
     </main>
     <script>
-      var authors = document.getElementsByClassName("author");
-      for (var i = 0; i < authors.length; i++) {
-        var element = authors[i];
-        console.log(element.innerHTML);
-        element.innerHTML = 'lekhok-'+(i+1);
-        element.style.backgroundColor = "lightblue";
-        element.style.margin = "10px";
-        console.log(element);
-      }
+      const article = document.getElementById('first-article');
+      const NewParagrap = document.createElement('p');
+      NewParagrap.innerHTML = 'This is  added by javaScript ';
+      article.appendChild(NewParagrap);
+
+      // add more gift item
+      const ul = document.getElementById('gift-list');
+      const li = document.createElement('li');
+      li.innerHTML = 'Brand new gift';
+      ul.appendChild(li);
+
     </script>
   </body>
 </html>
