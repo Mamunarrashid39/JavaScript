@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management Company</title>
+  </head>
+  <body>
+    <h1 onclick="handleClick(alert(7))">Exploring Event</h1>
+    <button onclick="handleClick(alert(9))">click me</button>
+    <button id="firstPerson">clink-1</button>
+    <button id="second">clink-2</button>
+    <button>clink-3</button>
+    <script>
+      document
+        .getElementById("firstPerson")
+        .addEventListener("click", function () {
+          document.body.style.color = "tomato";
+        });
+      document.getElementById("second").addEventListener("click", function () {
+        document.body.style.color = "gray";
+      });
+    </script>
+  </body>
+</html>
